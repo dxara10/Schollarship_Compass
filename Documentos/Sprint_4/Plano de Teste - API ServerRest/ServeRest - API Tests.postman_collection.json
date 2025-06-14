@@ -1,0 +1,3233 @@
+{
+	"info": {
+		"_postman_id": "fbf826b3-5a09-4229-a8a8-b0f87a962154",
+		"name": "ServeRest - API Tests",
+		"description": "# 🚀 Get started here\n\nThis template guides you through CRUD operations (GET, POST, PUT, DELETE), variables, and tests.\n\n## 🔖 **How to use this template**\n\n#### **Step 1: Send requests**\n\nRESTful APIs allow you to perform CRUD operations using the POST, GET, PUT, and DELETE HTTP methods.\n\nThis collection contains each of these [request](https://learning.postman.com/docs/sending-requests/requests/) types. Open each request and click \"Send\" to see what happens.\n\n#### **Step 2: View responses**\n\nObserve the response tab for status code (200 OK), response time, and size.\n\n#### **Step 3: Send new Body data**\n\nUpdate or add new data in \"Body\" in the POST request. Typically, Body data is also used in PUT request.\n\n```\n{\n    \"name\": \"Add your name in the body\"\n}\n\n ```\n\n#### **Step 4: Update the variable**\n\nVariables enable you to store and reuse values in Postman. We have created a [variable](https://learning.postman.com/docs/sending-requests/variables/) called `base_url` with the sample request [https://postman-api-learner.glitch.me](https://postman-api-learner.glitch.me). Replace it with your API endpoint to customize this collection.\n\n#### **Step 5: Add tests in the \"Scripts\" tab**\n\nAdding tests to your requests can help you confirm that your API is working as expected. You can write test scripts in JavaScript and view the output in the \"Test Results\" tab.\n\n<img src=\"https://content.pstmn.io/fa30ea0a-373d-4545-a668-e7b283cca343/aW1hZ2UucG5n\" alt=\"\" height=\"1530\" width=\"2162\">\n\n## 💪 Pro tips\n\n- Use folders to group related requests and organize the collection.\n    \n- Add more [scripts](https://learning.postman.com/docs/writing-scripts/intro-to-scripts/) to verify if the API works as expected and execute workflows.\n    \n\n## 💡Related templates\n\n[API testing basics](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[API documentation](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9c28f47-1253-44af-a2f3-20dce4da1f18&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[Authorization methods](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=31a9a6ed-4cdf-4ced-984c-d12c9aec1c27&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "44548171"
+	},
+	"item": [
+		{
+			"name": "usuarios",
+			"item": [
+				{
+					"name": "{_id}",
+					"item": [
+						{
+							"name": "/usuarios/{_id}",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n            \"nome\": \"Camille Batz atualizado\",\n            \"email\": \"testuserlm@yahoo.com\",\n            \"password\": \"SenhaForte\",\n            \"administrador\": \"false\",\n            \"_id\": \"qZPOXnIWd4K32jRo\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/usuarios/{_id}"
+							},
+							"response": [
+								{
+									"name": "E2 /usuarios/{_id} procurando usuario existente",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n            \"nome\": \"Camille Batz atualizado\",\n            \"email\": \"testuserlm@yahoo.com\",\n            \"password\": \"SenhaForte\",\n            \"administrador\": \"false\",\n            \"_id\": \"qZPOXnIWd4K32jRo\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/usuarios/{_id}"
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "html",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/html; charset=UTF-8"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Content-Length",
+											"value": "273"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 08 May 2025 16:17:03 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "\n<html>\n    <head>\n        <meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n        <title>400 Bad Request</title>\n    </head>\n    <body text=#000000 bgcolor=#ffffff>\n        <h1>Error: Bad Request</h1>\n        <h2>Your client has issued a malformed or illegal request.</h2>\n        <h2></h2>\n    </body>\n</html>"
+								}
+							]
+						},
+						{
+							"name": "/usuarios/{_id}",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n            \"nome\": \"Camille Batz atualizado\",\n            \"email\": \"testuserlm@yahoo.com\",\n            \"password\": \"SenhaForte\",\n            \"administrador\": \"false\",\n            \"_id\": \"qZPOXnIWd4K32jRo\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/usuarios/{_id}"
+							},
+							"response": [
+								{
+									"name": "4.1 /usuarios/{_id} criando usuario com método de atualização",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n            \"nome\": \"Camille Batz atualizado\",\n            \"email\": \"testuserlm@yahoo.com\",\n            \"password\": \"SenhaForte\",\n            \"administrador\": \"false\",\n            \"_id\": \"qZPOXnIWd4K32jRo\"\n        }",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/usuarios/{_id}"
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "access-control-allow-origin",
+											"value": "*"
+										},
+										{
+											"key": "x-dns-prefetch-control",
+											"value": "off"
+										},
+										{
+											"key": "x-frame-options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "strict-transport-security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "x-download-options",
+											"value": "noopen"
+										},
+										{
+											"key": "x-content-type-options",
+											"value": "nosniff"
+										},
+										{
+											"key": "x-xss-protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "x-cloud-trace-context",
+											"value": "88d64cb020ada85dea9e918b9f0d5a3a"
+										},
+										{
+											"key": "date",
+											"value": "Thu, 08 May 2025 16:08:05 GMT"
+										},
+										{
+											"key": "server",
+											"value": "Google Frontend"
+										},
+										{
+											"key": "Content-Length",
+											"value": "67"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"id deve ter exatamente 16 caracteres alfanuméricos\"\n}"
+								}
+							]
+						},
+						{
+							"name": "/usuarios/{_id}",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n            \"nome\": \"Camille Batz atualizado\",\n            \"email\": \"testuserlm@yahoo.com\",\n            \"password\": \"SenhaForte\",\n            \"administrador\": \"false\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/usuarios/{inexistente00000}"
+							},
+							"response": [
+								{
+									"name": "4.2/usuarios/{_id} criando usuario que já existe com id inexistente",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n            \"nome\": \"Camille Batz atualizado\",\n            \"email\": \"testuserlm@yahoo.com\",\n            \"password\": \"SenhaForte\",\n            \"administrador\": \"false\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/usuarios/{inexistente00000}"
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "access-control-allow-origin",
+											"value": "*"
+										},
+										{
+											"key": "x-dns-prefetch-control",
+											"value": "off"
+										},
+										{
+											"key": "x-frame-options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "strict-transport-security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "x-download-options",
+											"value": "noopen"
+										},
+										{
+											"key": "x-content-type-options",
+											"value": "nosniff"
+										},
+										{
+											"key": "x-xss-protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "x-cloud-trace-context",
+											"value": "2bcd5edfdd9efded681b405ac19f61c0"
+										},
+										{
+											"key": "date",
+											"value": "Thu, 08 May 2025 16:13:57 GMT"
+										},
+										{
+											"key": "server",
+											"value": "Google Frontend"
+										},
+										{
+											"key": "Content-Length",
+											"value": "67"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"id deve ter exatamente 16 caracteres alfanuméricos\"\n}"
+								}
+							]
+						},
+						{
+							"name": "/usuarios/{_id}",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n            \"nome\": \"Camille Batz atualizado\",\n            \"email\": \"testuserlm@yahoo.com\",\n            \"password\": \"SenhaForte\",\n            \"administrador\": \"false\",\n            \"_id\": \"qZPOXnIWd4K32jRo\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/usuarios/{_id}"
+							},
+							"response": [
+								{
+									"name": "E7 /usuarios/{_id} não é possivel deletar usuario",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n            \"nome\": \"Camille Batz atualizado\",\n            \"email\": \"testuserlm@yahoo.com\",\n            \"password\": \"SenhaForte\",\n            \"administrador\": \"false\",\n            \"_id\": \"qZPOXnIWd4K32jRo\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/usuarios/{_id}"
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "access-control-allow-origin",
+											"value": "*"
+										},
+										{
+											"key": "x-dns-prefetch-control",
+											"value": "off"
+										},
+										{
+											"key": "x-frame-options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "strict-transport-security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "x-download-options",
+											"value": "noopen"
+										},
+										{
+											"key": "x-content-type-options",
+											"value": "nosniff"
+										},
+										{
+											"key": "x-xss-protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "x-cloud-trace-context",
+											"value": "c0a97a8cae3145d3e2a1171575d26360"
+										},
+										{
+											"key": "date",
+											"value": "Thu, 08 May 2025 16:58:54 GMT"
+										},
+										{
+											"key": "server",
+											"value": "Google Frontend"
+										},
+										{
+											"key": "Content-Length",
+											"value": "67"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"id deve ter exatamente 16 caracteres alfanuméricos\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "/usuarios",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\":\"Douglas\",\n    \"email\":\"teste123@email.com\",\n    \"password\":\"123456\",\n    \"administrador\":\"true\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/usuarios"
+					},
+					"response": [
+						{
+							"name": "1.1 /usuarios apesar do status 200, usuario não é criado",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\":\"Douglas\",\n    \"email\":\"teste123@email.com\",\n    \"password\":\"123456\",\n    \"administrador\":\"true\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/usuarios"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "x-dns-prefetch-control",
+									"value": "off"
+								},
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "x-download-options",
+									"value": "noopen"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "x-cloud-trace-context",
+									"value": "86f36b599544d841904ddad1849fd58d"
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 May 2025 01:58:12 GMT"
+								},
+								{
+									"key": "server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4220"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"quantidade\": 20,\n    \"usuarios\": [\n        {\n            \"nome\": \"Fulano da Silva\",\n            \"email\": \"fulano@qa.com\",\n            \"password\": \"teste\",\n            \"administrador\": \"true\",\n            \"_id\": \"0uxuPY0cbmQhpEz1\"\n        },\n        {\n            \"nome\": \"Usuario Teste\",\n            \"email\": \"teste@examplo.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"70ZAA0puxcRV8W1Y\"\n        },\n        {\n            \"nome\": \"Usuario Teste\",\n            \"email\": \"teste@serve.rest\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"8ApMEfcDNwxmdhfD\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"senha1746668596198@qa.com\",\n            \"password\": \"12345\",\n            \"administrador\": \"true\",\n            \"_id\": \"9OlGzwoygwtQ9C6T\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"novo1746668300357@qa.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"Cix4ha7PSpPAjf5S\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"senha1234567890@qa.com\",\n            \"password\": \"12345\",\n            \"administrador\": \"true\",\n            \"_id\": \"Dq39gVAXoMgZ3cyj\"\n        },\n        {\n            \"nome\": \"Fulano da Silva\",\n            \"email\": \"karen_teste_@qa.com.br\",\n            \"password\": \"teste\",\n            \"administrador\": \"true\",\n            \"_id\": \"EzRKiH19vfqXNPXL\"\n        },\n        {\n            \"nome\": \"s\",\n            \"email\": \"s@gmail.com\",\n            \"password\": \"sabrina123\",\n            \"administrador\": \"false\",\n            \"_id\": \"F66iqCGk5HRlnF2D\"\n        },\n        {\n            \"nome\": \"Usuario Gmail\",\n            \"email\": \"teste@gmail.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"ILf19KuG0MdKbGTd\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"novo1746667986193@qa.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"LIRiG2LvtT04j7dC\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"teste1746667986193@qa.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"PakJzuVSaOpPya1t\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"novo1746668384691@qa.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"ZSmo1iYUb3VXQtt0\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"teste1234567890@qa.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"ae8YPYoah4lmFUZt\"\n        },\n        {\n            \"nome\": \"s\",\n            \"email\": \"sabrina@gmail.com\",\n            \"password\": \"sabrina123\",\n            \"administrador\": \"true\",\n            \"_id\": \"bFQQBgOFr2SHX0eu\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"novo1746668349794@qa.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"bmogFqi1pZ56DIA1\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"senha1746668511663@qa.com\",\n            \"password\": \"12345\",\n            \"administrador\": \"true\",\n            \"_id\": \"iaLksHZfiDkNZZkR\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"novo1746668597024@qa.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"lA9oQpdyZ5KC3CkR\"\n        },\n        {\n            \"nome\": \"Usuario Teste\",\n            \"email\": \"teste@example.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"nlGi0C7RYWZKlopp\"\n        },\n        {\n            \"nome\": \"Usuario Teste\",\n            \"email\": \"teste@serverest.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"oqwuaBsswbanMGKc\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"novo1746668512497@qa.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"qN7twbwGn8UVihDw\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "/usuarios duplicado",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\":\"Douglas\",\n    \"email\":\"teste123@email.com\",\n    \"password\":\"123456\",\n    \"administrador\":\"true\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/usuarios"
+					},
+					"response": [
+						{
+							"name": "1.2 /usuarios",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\":\"Douglas\",\n    \"email\":\"teste123@email.com\",\n    \"password\":\"123456\",\n    \"administrador\":\"true\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/usuarios"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "x-dns-prefetch-control",
+									"value": "off"
+								},
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "x-download-options",
+									"value": "noopen"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "x-cloud-trace-context",
+									"value": "86f36b599544d841904ddad1849fd58d"
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 May 2025 01:58:12 GMT"
+								},
+								{
+									"key": "server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4220"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"quantidade\": 20,\n    \"usuarios\": [\n        {\n            \"nome\": \"Fulano da Silva\",\n            \"email\": \"fulano@qa.com\",\n            \"password\": \"teste\",\n            \"administrador\": \"true\",\n            \"_id\": \"0uxuPY0cbmQhpEz1\"\n        },\n        {\n            \"nome\": \"Usuario Teste\",\n            \"email\": \"teste@examplo.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"70ZAA0puxcRV8W1Y\"\n        },\n        {\n            \"nome\": \"Usuario Teste\",\n            \"email\": \"teste@serve.rest\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"8ApMEfcDNwxmdhfD\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"senha1746668596198@qa.com\",\n            \"password\": \"12345\",\n            \"administrador\": \"true\",\n            \"_id\": \"9OlGzwoygwtQ9C6T\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"novo1746668300357@qa.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"Cix4ha7PSpPAjf5S\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"senha1234567890@qa.com\",\n            \"password\": \"12345\",\n            \"administrador\": \"true\",\n            \"_id\": \"Dq39gVAXoMgZ3cyj\"\n        },\n        {\n            \"nome\": \"Fulano da Silva\",\n            \"email\": \"karen_teste_@qa.com.br\",\n            \"password\": \"teste\",\n            \"administrador\": \"true\",\n            \"_id\": \"EzRKiH19vfqXNPXL\"\n        },\n        {\n            \"nome\": \"s\",\n            \"email\": \"s@gmail.com\",\n            \"password\": \"sabrina123\",\n            \"administrador\": \"false\",\n            \"_id\": \"F66iqCGk5HRlnF2D\"\n        },\n        {\n            \"nome\": \"Usuario Gmail\",\n            \"email\": \"teste@gmail.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"ILf19KuG0MdKbGTd\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"novo1746667986193@qa.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"LIRiG2LvtT04j7dC\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"teste1746667986193@qa.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"PakJzuVSaOpPya1t\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"novo1746668384691@qa.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"ZSmo1iYUb3VXQtt0\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"teste1234567890@qa.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"ae8YPYoah4lmFUZt\"\n        },\n        {\n            \"nome\": \"s\",\n            \"email\": \"sabrina@gmail.com\",\n            \"password\": \"sabrina123\",\n            \"administrador\": \"true\",\n            \"_id\": \"bFQQBgOFr2SHX0eu\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"novo1746668349794@qa.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"bmogFqi1pZ56DIA1\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"senha1746668511663@qa.com\",\n            \"password\": \"12345\",\n            \"administrador\": \"true\",\n            \"_id\": \"iaLksHZfiDkNZZkR\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"novo1746668597024@qa.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"lA9oQpdyZ5KC3CkR\"\n        },\n        {\n            \"nome\": \"Usuario Teste\",\n            \"email\": \"teste@example.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"nlGi0C7RYWZKlopp\"\n        },\n        {\n            \"nome\": \"Usuario Teste\",\n            \"email\": \"teste@serverest.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"oqwuaBsswbanMGKc\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"novo1746668512497@qa.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"qN7twbwGn8UVihDw\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "1.2 /usuarios Copy",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\":\"Douglas\",\n    \"email\":\"teste123@email.com\",\n    \"password\":\"123456\",\n    \"administrador\":\"true\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/usuarios"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "x-dns-prefetch-control",
+									"value": "off"
+								},
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "x-download-options",
+									"value": "noopen"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "x-cloud-trace-context",
+									"value": "d6cd842531cbbe4cd4ad07df738183f1"
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 May 2025 01:58:41 GMT"
+								},
+								{
+									"key": "server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4220"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"quantidade\": 20,\n    \"usuarios\": [\n        {\n            \"nome\": \"Fulano da Silva\",\n            \"email\": \"fulano@qa.com\",\n            \"password\": \"teste\",\n            \"administrador\": \"true\",\n            \"_id\": \"0uxuPY0cbmQhpEz1\"\n        },\n        {\n            \"nome\": \"Usuario Teste\",\n            \"email\": \"teste@examplo.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"70ZAA0puxcRV8W1Y\"\n        },\n        {\n            \"nome\": \"Usuario Teste\",\n            \"email\": \"teste@serve.rest\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"8ApMEfcDNwxmdhfD\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"senha1746668596198@qa.com\",\n            \"password\": \"12345\",\n            \"administrador\": \"true\",\n            \"_id\": \"9OlGzwoygwtQ9C6T\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"novo1746668300357@qa.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"Cix4ha7PSpPAjf5S\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"senha1234567890@qa.com\",\n            \"password\": \"12345\",\n            \"administrador\": \"true\",\n            \"_id\": \"Dq39gVAXoMgZ3cyj\"\n        },\n        {\n            \"nome\": \"Fulano da Silva\",\n            \"email\": \"karen_teste_@qa.com.br\",\n            \"password\": \"teste\",\n            \"administrador\": \"true\",\n            \"_id\": \"EzRKiH19vfqXNPXL\"\n        },\n        {\n            \"nome\": \"s\",\n            \"email\": \"s@gmail.com\",\n            \"password\": \"sabrina123\",\n            \"administrador\": \"false\",\n            \"_id\": \"F66iqCGk5HRlnF2D\"\n        },\n        {\n            \"nome\": \"Usuario Gmail\",\n            \"email\": \"teste@gmail.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"ILf19KuG0MdKbGTd\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"novo1746667986193@qa.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"LIRiG2LvtT04j7dC\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"teste1746667986193@qa.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"PakJzuVSaOpPya1t\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"novo1746668384691@qa.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"ZSmo1iYUb3VXQtt0\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"teste1234567890@qa.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"ae8YPYoah4lmFUZt\"\n        },\n        {\n            \"nome\": \"s\",\n            \"email\": \"sabrina@gmail.com\",\n            \"password\": \"sabrina123\",\n            \"administrador\": \"true\",\n            \"_id\": \"bFQQBgOFr2SHX0eu\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"novo1746668349794@qa.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"bmogFqi1pZ56DIA1\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"senha1746668511663@qa.com\",\n            \"password\": \"12345\",\n            \"administrador\": \"true\",\n            \"_id\": \"iaLksHZfiDkNZZkR\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"novo1746668597024@qa.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"lA9oQpdyZ5KC3CkR\"\n        },\n        {\n            \"nome\": \"Usuario Teste\",\n            \"email\": \"teste@example.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"nlGi0C7RYWZKlopp\"\n        },\n        {\n            \"nome\": \"Usuario Teste\",\n            \"email\": \"teste@serverest.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"oqwuaBsswbanMGKc\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"novo1746668512497@qa.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"qN7twbwGn8UVihDw\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "/usuarios",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\":\"Douglas\",\n    \"email\":\"teste123@email.com\",\n    \"password\":\"123456\",\n    \"administrador\":\"true\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/usuarios"
+					},
+					"response": [
+						{
+							"name": "E1 /usuarios não foi criado",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\":\"Douglas\",\n    \"email\":\"teste123@email.com\",\n    \"password\":\"123456\",\n    \"administrador\":\"true\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/usuarios"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Content-Length",
+									"value": "273"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 08 May 2025 03:39:36 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "\n<html>\n    <head>\n        <meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n        <title>400 Bad Request</title>\n    </head>\n    <body text=#000000 bgcolor=#ffffff>\n        <h1>Error: Bad Request</h1>\n        <h2>Your client has issued a malformed or illegal request.</h2>\n        <h2></h2>\n    </body>\n</html>"
+						}
+					]
+				},
+				{
+					"name": "/usuarios",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\":\"Douglas\",\n    \"email\":\"teste123@email.com\",\n    \"password\":\"12345678910\",\n    \"administrador\":\"true\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/usuarios"
+					},
+					"response": [
+						{
+							"name": "1.3 /usuarios estouro de campo senha",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\":\"Douglas\",\n    \"email\":\"teste123@email.com\",\n    \"password\":\"12345678910\",\n    \"administrador\":\"true\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/usuarios"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "x-dns-prefetch-control",
+									"value": "off"
+								},
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "x-download-options",
+									"value": "noopen"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "x-cloud-trace-context",
+									"value": "e4ea94a4b7147300d053e0a7d0772a31"
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 May 2025 02:10:29 GMT"
+								},
+								{
+									"key": "server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "5080"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"quantidade\": 24,\n    \"usuarios\": [\n        {\n            \"nome\": \"Fulano da Silva\",\n            \"email\": \"fulano@qa.com\",\n            \"password\": \"teste\",\n            \"administrador\": \"true\",\n            \"_id\": \"0uxuPY0cbmQhpEz1\"\n        },\n        {\n            \"nome\": \"Usuario Teste\",\n            \"email\": \"teste@examplo.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"70ZAA0puxcRV8W1Y\"\n        },\n        {\n            \"nome\": \"Usuario Teste\",\n            \"email\": \"teste@serve.rest\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"8ApMEfcDNwxmdhfD\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"senha1746668596198@qa.com\",\n            \"password\": \"12345\",\n            \"administrador\": \"true\",\n            \"_id\": \"9OlGzwoygwtQ9C6T\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"novo1746668300357@qa.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"Cix4ha7PSpPAjf5S\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"senha1234567890@qa.com\",\n            \"password\": \"12345\",\n            \"administrador\": \"true\",\n            \"_id\": \"Dq39gVAXoMgZ3cyj\"\n        },\n        {\n            \"nome\": \"Fulano da Silva\",\n            \"email\": \"karen_teste_@qa.com.br\",\n            \"password\": \"teste\",\n            \"administrador\": \"true\",\n            \"_id\": \"EzRKiH19vfqXNPXL\"\n        },\n        {\n            \"nome\": \"s\",\n            \"email\": \"s@gmail.com\",\n            \"password\": \"sabrina123\",\n            \"administrador\": \"false\",\n            \"_id\": \"F66iqCGk5HRlnF2D\"\n        },\n        {\n            \"nome\": \"Qa Tester\",\n            \"email\": \"testebatman@hotmail.com\",\n            \"password\": \"senha123\",\n            \"administrador\": \"true\",\n            \"_id\": \"F6nbRE5V0VpPvLUI\"\n        },\n        {\n            \"nome\": \"Usuario Gmail\",\n            \"email\": \"teste@gmail.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"ILf19KuG0MdKbGTd\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"novo1746667986193@qa.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"LIRiG2LvtT04j7dC\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"teste1746667986193@qa.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"PakJzuVSaOpPya1t\"\n        },\n        {\n            \"nome\": \"Qa Tester\",\n            \"email\": \"batmail@gmail.com\",\n            \"password\": \"12\",\n            \"administrador\": \"true\",\n            \"_id\": \"UmgfJxfOIgu82miG\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"novo1746668384691@qa.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"ZSmo1iYUb3VXQtt0\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"teste1234567890@qa.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"ae8YPYoah4lmFUZt\"\n        },\n        {\n            \"nome\": \"s\",\n            \"email\": \"sabrina@gmail.com\",\n            \"password\": \"sabrina123\",\n            \"administrador\": \"true\",\n            \"_id\": \"bFQQBgOFr2SHX0eu\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"novo1746668349794@qa.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"bmogFqi1pZ56DIA1\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"senha1746668511663@qa.com\",\n            \"password\": \"12345\",\n            \"administrador\": \"true\",\n            \"_id\": \"iaLksHZfiDkNZZkR\"\n        },\n        {\n            \"nome\": \"Qa Tester\",\n            \"email\": \"batmai1l@gmail.com\",\n            \"password\": \"12kjshdksjahdasl;dsdflssadasdaddasd\",\n            \"administrador\": \"true\",\n            \"_id\": \"kwd6oNnADruwL9oE\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"novo1746668597024@qa.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"lA9oQpdyZ5KC3CkR\"\n        },\n        {\n            \"nome\": \"Usuario Teste\",\n            \"email\": \"teste@example.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"nlGi0C7RYWZKlopp\"\n        },\n        {\n            \"nome\": \"Usuario Teste\",\n            \"email\": \"teste@serverest.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"oqwuaBsswbanMGKc\"\n        },\n        {\n            \"nome\": \"Qa Tester\",\n            \"email\": \"testebatman@gmail.com\",\n            \"password\": \"senha123\",\n            \"administrador\": \"true\",\n            \"_id\": \"oyEkqx2ae8xV09CI\"\n        },\n        {\n            \"nome\": \"Teste\",\n            \"email\": \"novo1746668512497@qa.com\",\n            \"password\": \"teste123\",\n            \"administrador\": \"true\",\n            \"_id\": \"qN7twbwGn8UVihDw\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "/usuarios",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\":\"Douglas\",\n    \"email\":\"email-invalido\",\n    \"password\":\"12345678910\",\n    \"administrador\":\"true\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/usuarios"
+					},
+					"response": [
+						{
+							"name": "1.4 /usuarios com email invalido",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\":\"Douglas\",\n    \"email\":\"email-invalido\",\n    \"password\":\"12345678910\",\n    \"administrador\":\"true\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/usuarios"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "x-dns-prefetch-control",
+									"value": "off"
+								},
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "x-download-options",
+									"value": "noopen"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "x-cloud-trace-context",
+									"value": "0ecaf267da8a155ada411a04ec33ed3b"
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 May 2025 03:05:28 GMT"
+								},
+								{
+									"key": "server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "309"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"quantidade\": 1,\n    \"usuarios\": [\n        {\n            \"nome\": \"usuario foronnnssssss222222s222222\",\n            \"email\": \"userussssssse222222222sss22222r@corinthians.com\",\n            \"password\": \"12342222\",\n            \"administrador\": \"true\",\n            \"_id\": \"0uxuPY0cbmQhpEz1\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "login",
+			"item": [
+				{
+					"name": "/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"teste123@email.com\",\n    \"password\":\"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/login"
+					},
+					"response": [
+						{
+							"name": "1.5 /login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"teste123@email.com\",\n    \"password\":\"123456\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/login"
+							},
+							"status": "Method Not Allowed",
+							"code": 405,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "x-dns-prefetch-control",
+									"value": "off"
+								},
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "x-download-options",
+									"value": "noopen"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "x-cloud-trace-context",
+									"value": "0c3b85049c9fcded1ff3687e7adfa321"
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 May 2025 03:11:08 GMT"
+								},
+								{
+									"key": "server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "154"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Não é possível realizar GET em /login. Acesse https://compassuol.serverest.dev para ver as rotas disponíveis e como utilizá-las.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"teste123@email.com\",\n    \"password\":\"senhaerrada\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/login"
+					},
+					"response": [
+						{
+							"name": "1.6 /login senha errada",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"teste123@email.com\",\n    \"password\":\"senhaerrada\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/login"
+							},
+							"status": "Method Not Allowed",
+							"code": 405,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "x-dns-prefetch-control",
+									"value": "off"
+								},
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "x-download-options",
+									"value": "noopen"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "x-cloud-trace-context",
+									"value": "1268ddfb4c802f08b51fbd0e8287c5b1"
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 May 2025 03:33:55 GMT"
+								},
+								{
+									"key": "server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "154"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Não é possível realizar GET em /login. Acesse https://compassuol.serverest.dev para ver as rotas disponíveis e como utilizá-las.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"userinexistente@email.com\",\n    \"password\":\"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/login"
+					},
+					"response": [
+						{
+							"name": "1.7 /login user inexistente",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"userinexistente@email.com\",\n    \"password\":\"123456\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/login"
+							},
+							"status": "Method Not Allowed",
+							"code": 405,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "x-dns-prefetch-control",
+									"value": "off"
+								},
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "x-download-options",
+									"value": "noopen"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "x-cloud-trace-context",
+									"value": "cfffd14fe79c74157044c454f4b07ab5"
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 May 2025 03:35:54 GMT"
+								},
+								{
+									"key": "server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "154"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Não é possível realizar GET em /login. Acesse https://compassuol.serverest.dev para ver as rotas disponíveis e como utilizá-las.\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "produtos",
+			"item": [
+				{
+					"name": "{_id}",
+					"item": [
+						{
+							"name": "/produtos/{_id}",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\":\"ProdutoTeste\",\n    \"preco\":100,\n    \"descricao\":\"desc\",\n    \"quantidade\":10\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/produtos/{_id}"
+							},
+							"response": [
+								{
+									"name": "E4 /produtos/{_id} o produto não pode ser consultado",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"nome\":\"ProdutoTeste\",\n    \"preco\":100,\n    \"descricao\":\"desc\",\n    \"quantidade\":10\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/produtos/{_id}"
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "html",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/html; charset=UTF-8"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Content-Length",
+											"value": "273"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 08 May 2025 16:45:42 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "\n<html>\n    <head>\n        <meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n        <title>400 Bad Request</title>\n    </head>\n    <body text=#000000 bgcolor=#ffffff>\n        <h1>Error: Bad Request</h1>\n        <h2>Your client has issued a malformed or illegal request.</h2>\n        <h2></h2>\n    </body>\n</html>"
+								}
+							]
+						},
+						{
+							"name": "/produtos/{_id}",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\":\"ProdutoTeste\",\n    \"preco\":100,\n    \"descricao\":\"desc\",\n    \"quantidade\":10\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/produtos/{_id}"
+							},
+							"response": [
+								{
+									"name": "2.3 /produtos/{_id} produto não criado",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"nome\":\"ProdutoTeste\",\n    \"preco\":100,\n    \"descricao\":\"desc\",\n    \"quantidade\":10\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/produtos/{_id}"
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "access-control-allow-origin",
+											"value": "*"
+										},
+										{
+											"key": "x-dns-prefetch-control",
+											"value": "off"
+										},
+										{
+											"key": "x-frame-options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "strict-transport-security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "x-download-options",
+											"value": "noopen"
+										},
+										{
+											"key": "x-content-type-options",
+											"value": "nosniff"
+										},
+										{
+											"key": "x-xss-protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "x-cloud-trace-context",
+											"value": "c2438f67c12dfb1c42dd122f65432d47"
+										},
+										{
+											"key": "date",
+											"value": "Thu, 08 May 2025 04:06:38 GMT"
+										},
+										{
+											"key": "server",
+											"value": "Google Frontend"
+										},
+										{
+											"key": "Content-Length",
+											"value": "67"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"id deve ter exatamente 16 caracteres alfanuméricos\"\n}"
+								}
+							]
+						},
+						{
+							"name": "4.6 /produtos/{_id}",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\":\"ProdutoTeste\",\n    \"preco\":100,\n    \"descricao\":\"desc\",\n    \"quantidade\":10\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/produtos/{_id}"
+							},
+							"response": [
+								{
+									"name": "4.6 /produtos/{_id} gerando pane por concorrencia de dados",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"nome\":\"ProdutoTeste\",\n    \"preco\":100,\n    \"descricao\":\"desc\",\n    \"quantidade\":10\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/produtos/{_id}"
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "access-control-allow-origin",
+											"value": "*"
+										},
+										{
+											"key": "x-dns-prefetch-control",
+											"value": "off"
+										},
+										{
+											"key": "x-frame-options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "strict-transport-security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "x-download-options",
+											"value": "noopen"
+										},
+										{
+											"key": "x-content-type-options",
+											"value": "nosniff"
+										},
+										{
+											"key": "x-xss-protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "x-cloud-trace-context",
+											"value": "040316042955d6cd8df7a9993feb559a"
+										},
+										{
+											"key": "date",
+											"value": "Thu, 08 May 2025 16:49:08 GMT"
+										},
+										{
+											"key": "server",
+											"value": "Google Frontend"
+										},
+										{
+											"key": "Content-Length",
+											"value": "67"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"id deve ter exatamente 16 caracteres alfanuméricos\"\n}"
+								}
+							]
+						},
+						{
+							"name": "4.6 /produtos/{_id}",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": {
+										"value": "5678",
+										"key": "Authorization"
+									}
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\":\"ProdutoTeste\",\n    \"preco\":110,\n    \"descricao\":\"desc\",\n    \"quantidade\":10\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/produtos/{_id}"
+							},
+							"response": [
+								{
+									"name": "4.6 /produtos/{_id} gerando pane por concorrencia de dados",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"nome\":\"ProdutoTeste\",\n    \"preco\":110,\n    \"descricao\":\"desc\",\n    \"quantidade\":10\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/produtos/{_id}"
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "access-control-allow-origin",
+											"value": "*"
+										},
+										{
+											"key": "x-dns-prefetch-control",
+											"value": "off"
+										},
+										{
+											"key": "x-frame-options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "strict-transport-security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "x-download-options",
+											"value": "noopen"
+										},
+										{
+											"key": "x-content-type-options",
+											"value": "nosniff"
+										},
+										{
+											"key": "x-xss-protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "x-cloud-trace-context",
+											"value": "4029c8af3e264aca0c397f1737001460;o=1"
+										},
+										{
+											"key": "date",
+											"value": "Thu, 08 May 2025 16:50:52 GMT"
+										},
+										{
+											"key": "server",
+											"value": "Google Frontend"
+										},
+										{
+											"key": "Content-Length",
+											"value": "67"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"id deve ter exatamente 16 caracteres alfanuméricos\"\n}"
+								}
+							]
+						},
+						{
+							"name": "/produtos/{_id}",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"quantidade\": 2,\n    \"produtos\": [\n        {\n            \"nome\": \"Logitech MX Vertical\",\n            \"preco\": 470,\n            \"descricao\": \"Mouse\",\n            \"quantidade\": 382,\n        },\n        {\n            \"nome\": \"Samsung 60 polegadas\",\n            \"preco\": 5240,\n            \"descricao\": \"TV\",\n            \"quantidade\": 49977,\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/produtos/{_id}"
+							},
+							"response": [
+								{
+									"name": "4.3 /produtos/{_id} Criando produto com nome já existente",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"quantidade\": 2,\n    \"produtos\": [\n        {\n            \"nome\": \"Logitech MX Vertical\",\n            \"preco\": 470,\n            \"descricao\": \"Mouse\",\n            \"quantidade\": 382,\n        },\n        {\n            \"nome\": \"Samsung 60 polegadas\",\n            \"preco\": 5240,\n            \"descricao\": \"TV\",\n            \"quantidade\": 49977,\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/produtos/{_id}"
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "access-control-allow-origin",
+											"value": "*"
+										},
+										{
+											"key": "x-dns-prefetch-control",
+											"value": "off"
+										},
+										{
+											"key": "x-frame-options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "strict-transport-security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "x-download-options",
+											"value": "noopen"
+										},
+										{
+											"key": "x-content-type-options",
+											"value": "nosniff"
+										},
+										{
+											"key": "x-xss-protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "x-cloud-trace-context",
+											"value": "de193215d66b3665267dac4e924eb528"
+										},
+										{
+											"key": "date",
+											"value": "Thu, 08 May 2025 16:22:25 GMT"
+										},
+										{
+											"key": "server",
+											"value": "Google Frontend"
+										},
+										{
+											"key": "Content-Length",
+											"value": "67"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"id deve ter exatamente 16 caracteres alfanuméricos\"\n}"
+								}
+							]
+						},
+						{
+							"name": "/produtos/{_id}",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\": \"Samsung 60 polegadas\",\n    \"preco\": 5240,\n    \"descricao\": \"TV\",\n    \"quantidade\": 49977,\n    \"_id\": \"K6leHdftCeOJj8BJ\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/produtos/{_id}"
+							},
+							"response": [
+								{
+									"name": "2.7 /produtos/{_id} Copy atualizar produto sem autenticação",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"nome\": \"Samsung 60 polegadas\",\n    \"preco\": 5240,\n    \"descricao\": \"TV\",\n    \"quantidade\": 49977,\n    \"_id\": \"K6leHdftCeOJj8BJ\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/produtos/{_id}"
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "access-control-allow-origin",
+											"value": "*"
+										},
+										{
+											"key": "x-dns-prefetch-control",
+											"value": "off"
+										},
+										{
+											"key": "x-frame-options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "strict-transport-security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "x-download-options",
+											"value": "noopen"
+										},
+										{
+											"key": "x-content-type-options",
+											"value": "nosniff"
+										},
+										{
+											"key": "x-xss-protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "x-cloud-trace-context",
+											"value": "082f28c746158456bdfdf3791218d320"
+										},
+										{
+											"key": "date",
+											"value": "Thu, 08 May 2025 04:29:34 GMT"
+										},
+										{
+											"key": "server",
+											"value": "Google Frontend"
+										},
+										{
+											"key": "Content-Length",
+											"value": "67"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"id deve ter exatamente 16 caracteres alfanuméricos\"\n}"
+								}
+							]
+						},
+						{
+							"name": "/produtos/{_id}",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\": \"Samsung 60 polegadas\",\n    \"preco\": 5240,\n    \"descricao\": \"TV\",\n    \"quantidade\": 49977,\n    \"_id\": \"K6leHdftCeOJj8BJ\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/produtos/{_id}"
+							},
+							"response": [
+								{
+									"name": "2.4 deletando produtos",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"nome\": \"Samsung 60 polegadas\",\n    \"preco\": 5240,\n    \"descricao\": \"TV\",\n    \"quantidade\": 49977,\n    \"_id\": \"K6leHdftCeOJj8BJ\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/produtos/{_id}"
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "access-control-allow-origin",
+											"value": "*"
+										},
+										{
+											"key": "x-dns-prefetch-control",
+											"value": "off"
+										},
+										{
+											"key": "x-frame-options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "strict-transport-security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "x-download-options",
+											"value": "noopen"
+										},
+										{
+											"key": "x-content-type-options",
+											"value": "nosniff"
+										},
+										{
+											"key": "x-xss-protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "x-cloud-trace-context",
+											"value": "4085762287bc1e4ec3e84b89ff38a50e"
+										},
+										{
+											"key": "date",
+											"value": "Thu, 08 May 2025 04:21:05 GMT"
+										},
+										{
+											"key": "server",
+											"value": "Google Frontend"
+										},
+										{
+											"key": "Content-Length",
+											"value": "67"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"id deve ter exatamente 16 caracteres alfanuméricos\"\n}"
+								}
+							]
+						},
+						{
+							"name": "/produtos/{_id}",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\": \"Samsung 60 polegadas\",\n    \"preco\": 5240,\n    \"descricao\": \"TV\",\n    \"quantidade\": 49977,\n    \"_id\": \"K6leHdftCeOJj8BJ\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/produtos/{_id}"
+							},
+							"response": [
+								{
+									"name": "2.5 /produtos/{_id} deletando produtos existente",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"nome\": \"Samsung 60 polegadas\",\n    \"preco\": 5240,\n    \"descricao\": \"TV\",\n    \"quantidade\": 49977,\n    \"_id\": \"K6leHdftCeOJj8BJ\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/produtos/{_id}"
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "access-control-allow-origin",
+											"value": "*"
+										},
+										{
+											"key": "x-dns-prefetch-control",
+											"value": "off"
+										},
+										{
+											"key": "x-frame-options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "strict-transport-security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "x-download-options",
+											"value": "noopen"
+										},
+										{
+											"key": "x-content-type-options",
+											"value": "nosniff"
+										},
+										{
+											"key": "x-xss-protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "x-cloud-trace-context",
+											"value": "5ed2cc521a033026f7a7991afca0159b"
+										},
+										{
+											"key": "date",
+											"value": "Thu, 08 May 2025 04:19:46 GMT"
+										},
+										{
+											"key": "server",
+											"value": "Google Frontend"
+										},
+										{
+											"key": "Content-Length",
+											"value": "67"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"id deve ter exatamente 16 caracteres alfanuméricos\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "/produtos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": {
+								"value": "9999",
+								"key": "Authorization"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"quantidade\": 1,\n    \"produtos\": [\n        {\n            \"nome\": \"Logitech MX Vertical\",\n            \"preco\": 470,\n            \"descricao\": \"Mouse\",\n            \"quantidade\": 382,\n            \"_id\": \"BeeJh5lz3k6kSIzA\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/produtos"
+					},
+					"response": [
+						{
+							"name": "4.4 /produtos acessando produtos com token expirado",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"quantidade\": 1,\n    \"produtos\": [\n        {\n            \"nome\": \"Logitech MX Vertical\",\n            \"preco\": 470,\n            \"descricao\": \"Mouse\",\n            \"quantidade\": 382,\n            \"_id\": \"BeeJh5lz3k6kSIzA\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/produtos"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Content-Length",
+									"value": "273"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 08 May 2025 16:26:19 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "\n<html>\n    <head>\n        <meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n        <title>400 Bad Request</title>\n    </head>\n    <body text=#000000 bgcolor=#ffffff>\n        <h1>Error: Bad Request</h1>\n        <h2>Your client has issued a malformed or illegal request.</h2>\n        <h2></h2>\n    </body>\n</html>"
+						}
+					]
+				},
+				{
+					"name": "/produtos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"quantidade\": 1,\n    \"produtos\": [\n        {\n            \"nome\": \"Logitech MX Vertical\",\n            \"preco\": 470,\n            \"descricao\": \"Mouse\",\n            \"quantidade\": 382,\n            \"_id\": \"BeeJh5lz3k6kSIzA\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/produtos"
+					},
+					"response": [
+						{
+							"name": "E3 /produtos não é possivel consutar produtos existentes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"quantidade\": 1,\n    \"produtos\": [\n        {\n            \"nome\": \"Logitech MX Vertical\",\n            \"preco\": 470,\n            \"descricao\": \"Mouse\",\n            \"quantidade\": 382,\n            \"_id\": \"BeeJh5lz3k6kSIzA\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/produtos"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Content-Length",
+									"value": "273"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 08 May 2025 16:27:31 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "\n<html>\n    <head>\n        <meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n        <title>400 Bad Request</title>\n    </head>\n    <body text=#000000 bgcolor=#ffffff>\n        <h1>Error: Bad Request</h1>\n        <h2>Your client has issued a malformed or illegal request.</h2>\n        <h2></h2>\n    </body>\n</html>"
+						}
+					]
+				},
+				{
+					"name": "/produtos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\":\"ProdutoTeste\",\n    \"preco\":100,\n    \"descricao\":\"desc\",\n    \"quantidade\":10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/produtos"
+					},
+					"response": [
+						{
+							"name": "2.1 /Criar produto válido apesar do status 200, o produto não é criado",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\":\"ProdutoTeste\",\n    \"preco\":100,\n    \"descricao\":\"desc\",\n    \"quantidade\":10\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/produtos"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "x-dns-prefetch-control",
+									"value": "off"
+								},
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "x-download-options",
+									"value": "noopen"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "x-cloud-trace-context",
+									"value": "d63924a646baa2afd1067f3951a3c3ad"
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 May 2025 03:49:29 GMT"
+								},
+								{
+									"key": "server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "435"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"quantidade\": 2,\n    \"produtos\": [\n        {\n            \"nome\": \"Logitech MX Vertical\",\n            \"preco\": 470,\n            \"descricao\": \"Mouse\",\n            \"quantidade\": 382,\n            \"_id\": \"BeeJh5lz3k6kSIzA\"\n        },\n        {\n            \"nome\": \"Samsung 60 polegadas\",\n            \"preco\": 5240,\n            \"descricao\": \"TV\",\n            \"quantidade\": 49977,\n            \"_id\": \"K6leHdftCeOJj8BJ\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "/produtos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\":\"\",\n    \"preco\":100,\n    \"descricao\":\"desc\",\n    \"quantidade\":10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/produtos"
+					},
+					"response": [
+						{
+							"name": "4.5 /produtos aceita cadastro de produtos sem nome, apesar de não criar",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\":\"\",\n    \"preco\":100,\n    \"descricao\":\"desc\",\n    \"quantidade\":10\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/produtos"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "x-dns-prefetch-control",
+									"value": "off"
+								},
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "x-download-options",
+									"value": "noopen"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "x-cloud-trace-context",
+									"value": "5eab752ab1bee3aff78087c3319f0c37"
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 May 2025 16:41:34 GMT"
+								},
+								{
+									"key": "server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1577"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"quantidade\": 8,\n    \"produtos\": [\n        {\n            \"nome\": \"Logitech XMax\",\n            \"preco\": 520,\n            \"descricao\": \"Mouse\",\n            \"quantidade\": 3,\n            \"_id\": \"7IPVDhKPil7ZAPGg\"\n        },\n        {\n            \"nome\": \"Logitech MX Vertical\",\n            \"preco\": 470,\n            \"descricao\": \"Mouse\",\n            \"quantidade\": 381,\n            \"_id\": \"BeeJh5lz3k6kSIzA\"\n        },\n        {\n            \"nome\": \"Logitech\",\n            \"preco\": 520,\n            \"descricao\": \"Mouse\",\n            \"quantidade\": 3,\n            \"_id\": \"EgZ9CHP0VvnPS2RX\"\n        },\n        {\n            \"nome\": \"Logitech M Vertical\",\n            \"preco\": 470,\n            \"descricao\": \"Mouse\",\n            \"quantidade\": 381,\n            \"_id\": \"K6leHdftCeOJj8BJ\"\n        },\n        {\n            \"nome\": \"Handcrafted Wooden Chair\",\n            \"preco\": 8000,\n            \"descricao\": \"Generic\",\n            \"quantidade\": 990,\n            \"_id\": \"N8S1TsVRJjDPnvHq\"\n        },\n        {\n            \"nome\": \"Intelligent Soft Computer\",\n            \"preco\": 8000,\n            \"descricao\": \"Sleek\",\n            \"quantidade\": 999,\n            \"_id\": \"NU8q2ey4Pvr13Yk8\"\n        },\n        {\n            \"nome\": \"Logitech MX Vertical V2\",\n            \"preco\": 470,\n            \"descricao\": \"Mouse\",\n            \"quantidade\": 381,\n            \"_id\": \"SjEVhc3RolagUFnq\"\n        },\n        {\n            \"nome\": \"00000j\",\n            \"preco\": 400,\n            \"descricao\": \"Mouse\",\n            \"quantidade\": 381,\n            \"_id\": \"YgPSGz20bMaX83Wy\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "/produtos duplicar produto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\":\"ProdutoTeste\",\n    \"preco\":100,\n    \"descricao\":\"desc\",\n    \"quantidade\":10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/produtos"
+					},
+					"response": [
+						{
+							"name": "2.2 /produtos duplicar produto",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"\n    nome\":\"ProdutoTeste\",\n    \"preco\":100,\n    \"descricao\":\"desc\",\n    \"quantidade\":10\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/produtos"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "x-dns-prefetch-control",
+									"value": "off"
+								},
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "x-download-options",
+									"value": "noopen"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "x-cloud-trace-context",
+									"value": "03a40ed847a202072b4d9a4041c47f4f"
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 May 2025 04:00:27 GMT"
+								},
+								{
+									"key": "server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "435"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"quantidade\": 2,\n    \"produtos\": [\n        {\n            \"nome\": \"Logitech MX Vertical\",\n            \"preco\": 470,\n            \"descricao\": \"Mouse\",\n            \"quantidade\": 382,\n            \"_id\": \"BeeJh5lz3k6kSIzA\"\n        },\n        {\n            \"nome\": \"Samsung 60 polegadas\",\n            \"preco\": 5240,\n            \"descricao\": \"TV\",\n            \"quantidade\": 49977,\n            \"_id\": \"K6leHdftCeOJj8BJ\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "carrinho",
+			"item": [
+				{
+					"name": "{_id}",
+					"item": [
+						{
+							"name": "/carrinhos/{_id}",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"quantidade\": 1,\n    \"carrinhos\": [\n        {\n            \"produtos\": [\n                {\n                    \"idProduto\": \"BeeJh5lz3k6kSIzA\",\n                    //estamos somando 4 unidades em relação ao carrinho inicial\n                    \"quantidade\": 6,\n                    \"precoUnitario\": 470\n                },\n                {\n                    \"idProduto\": \"K6leHdftCeOJj8BJ\",\n                    \"quantidade\": 1,\n                    \"precoUnitario\": 5240\n                }\n            ],\n            \"precoTotal\": 6180,\n            \"quantidadeTotal\": 3,\n            \"idUsuario\": \"0uxuPY0cbmQhpEz1\",\n            \"_id\": \"qbMqntef4iTOwWfg\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/carrinhos/{_id}"
+							},
+							"response": [
+								{
+									"name": "E5 /carrinhos/{_id} não é possivel ver o carrinho",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"quantidade\": 1,\n    \"carrinhos\": [\n        {\n            \"produtos\": [\n                {\n                    \"idProduto\": \"BeeJh5lz3k6kSIzA\",\n                    //estamos somando 4 unidades em relação ao carrinho inicial\n                    \"quantidade\": 6,\n                    \"precoUnitario\": 470\n                },\n                {\n                    \"idProduto\": \"K6leHdftCeOJj8BJ\",\n                    \"quantidade\": 1,\n                    \"precoUnitario\": 5240\n                }\n            ],\n            \"precoTotal\": 6180,\n            \"quantidadeTotal\": 3,\n            \"idUsuario\": \"0uxuPY0cbmQhpEz1\",\n            \"_id\": \"qbMqntef4iTOwWfg\"\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/carrinhos/{_id}"
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "html",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/html; charset=UTF-8"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Content-Length",
+											"value": "273"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 08 May 2025 16:56:09 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "\n<html>\n    <head>\n        <meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n        <title>400 Bad Request</title>\n    </head>\n    <body text=#000000 bgcolor=#ffffff>\n        <h1>Error: Bad Request</h1>\n        <h2>Your client has issued a malformed or illegal request.</h2>\n        <h2></h2>\n    </body>\n</html>"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "concluir_compra",
+					"item": [
+						{
+							"name": "/carrinhos/concluir-compra",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"quantidade\": 1,\n    \"carrinhos\": [\n        {\n            \"produtos\": [\n                {\n                    \"idProduto\": \"BeeJh5lz3k6kSIzA\",\n                    //estamos somando 4 unidades em relação ao carrinho inicial\n                    \"quantidade\": 6,\n                    \"precoUnitario\": 470\n                },\n                {\n                    \"idProduto\": \"K6leHdftCeOJj8BJ\",\n                    \"quantidade\": 1,\n                    \"precoUnitario\": 5240\n                }\n            ],\n            \"precoTotal\": 6180,\n            \"quantidadeTotal\": 3,\n            \"idUsuario\": \"0uxuPY0cbmQhpEz1\",\n            \"_id\": \"qbMqntef4iTOwWfg\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/carrinhos/concluir-compra"
+							},
+							"response": [
+								{
+									"name": "E6 /carrinhos/concluir-compra não é possível excluir um carrinho",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"quantidade\": 1,\n    \"carrinhos\": [\n        {\n            \"produtos\": [\n                {\n                    \"idProduto\": \"BeeJh5lz3k6kSIzA\",\n                    //estamos somando 4 unidades em relação ao carrinho inicial\n                    \"quantidade\": 6,\n                    \"precoUnitario\": 470\n                },\n                {\n                    \"idProduto\": \"K6leHdftCeOJj8BJ\",\n                    \"quantidade\": 1,\n                    \"precoUnitario\": 5240\n                }\n            ],\n            \"precoTotal\": 6180,\n            \"quantidadeTotal\": 3,\n            \"idUsuario\": \"0uxuPY0cbmQhpEz1\",\n            \"_id\": \"qbMqntef4iTOwWfg\"\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/carrinhos/concluir-compra"
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "access-control-allow-origin",
+											"value": "*"
+										},
+										{
+											"key": "x-dns-prefetch-control",
+											"value": "off"
+										},
+										{
+											"key": "x-frame-options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "strict-transport-security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "x-download-options",
+											"value": "noopen"
+										},
+										{
+											"key": "x-content-type-options",
+											"value": "nosniff"
+										},
+										{
+											"key": "x-xss-protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "x-cloud-trace-context",
+											"value": "76abc4b8a5b5e9325bd4f2b906615991"
+										},
+										{
+											"key": "date",
+											"value": "Thu, 08 May 2025 16:56:58 GMT"
+										},
+										{
+											"key": "server",
+											"value": "Google Frontend"
+										},
+										{
+											"key": "Content-Length",
+											"value": "67"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"id deve ter exatamente 16 caracteres alfanuméricos\"\n}"
+								}
+							]
+						},
+						{
+							"name": "/carrinhos/concluir-compra",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"quantidade\": 1,\n    \"carrinhos\": [\n        {\n            \"produtos\": [\n                {\n                    \"idProduto\": \"BeeJh5lz3k6kSIzA\",\n                    //estamos somando 4 unidades em relação ao carrinho inicial\n                    \"quantidade\": 6,\n                    \"precoUnitario\": 470\n                },\n                {\n                    \"idProduto\": \"K6leHdftCeOJj8BJ\",\n                    \"quantidade\": 1,\n                    \"precoUnitario\": 5240\n                }\n            ],\n            \"precoTotal\": 6180,\n            \"quantidadeTotal\": 3,\n            \"idUsuario\": \"0uxuPY0cbmQhpEz1\",\n            \"_id\": \"qbMqntef4iTOwWfg\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/carrinhos/concluir-compra"
+							},
+							"response": [
+								{
+									"name": "3.4 /carrinhos/concluir-compra atualizar carrinho",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"quantidade\": 1,\n    \"carrinhos\": [\n        {\n            \"produtos\": [\n                {\n                    \"idProduto\": \"BeeJh5lz3k6kSIzA\",\n                    //estamos somando 4 unidades em relação ao carrinho inicial\n                    \"quantidade\": 6,\n                    \"precoUnitario\": 470\n                },\n                {\n                    \"idProduto\": \"K6leHdftCeOJj8BJ\",\n                    \"quantidade\": 1,\n                    \"precoUnitario\": 5240\n                }\n            ],\n            \"precoTotal\": 6180,\n            \"quantidadeTotal\": 3,\n            \"idUsuario\": \"0uxuPY0cbmQhpEz1\",\n            \"_id\": \"qbMqntef4iTOwWfg\"\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/carrinhos/concluir-compra"
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "access-control-allow-origin",
+											"value": "*"
+										},
+										{
+											"key": "x-dns-prefetch-control",
+											"value": "off"
+										},
+										{
+											"key": "x-frame-options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "strict-transport-security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "x-download-options",
+											"value": "noopen"
+										},
+										{
+											"key": "x-content-type-options",
+											"value": "nosniff"
+										},
+										{
+											"key": "x-xss-protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "x-cloud-trace-context",
+											"value": "c8cb4ce2d046da878c147b7253bc2b31"
+										},
+										{
+											"key": "date",
+											"value": "Thu, 08 May 2025 15:22:21 GMT"
+										},
+										{
+											"key": "server",
+											"value": "Google Frontend"
+										},
+										{
+											"key": "Content-Length",
+											"value": "67"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"id deve ter exatamente 16 caracteres alfanuméricos\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "cancelar_compra",
+					"item": [
+						{
+							"name": "/carrinhos/cancelar-compra",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"quantidade\": 3,\n    \"carrinhos\": [\n        {\n            \"produtos\": [\n                {\n                    \"idProduto\": \"xzMbEq4MI1ovUQ0N\",\n                    \"quantidade\": 1,\n                    \"precoUnitario\": 22\n                }\n            ],\n            \"precoTotal\": 22,\n            \"quantidadeTotal\": 1,\n            \"idUsuario\": \"acUKKYrXhKrEZMPL\",\n            \"_id\": \"2jF7NiHGkPR7wTe1\"\n        },\n        {\n            \"produtos\": [\n                {\n                    \"idProduto\": \"QYfJEsBNwQV94iFu\",\n                    \"quantidade\": 2,\n                    \"precoUnitario\": 39\n                },\n                {\n                    \"idProduto\": \"Coxk8ujZwqgPcKzG\",\n                    \"quantidade\": 1,\n                    \"precoUnitario\": 27\n                }\n            ],\n            \"precoTotal\": 105,\n            \"quantidadeTotal\": 3,\n            \"idUsuario\": \"1oUxhsNqvJqSVSd7\",\n            \"_id\": \"SkxyVS3H3xPhyGdH\"\n        },\n        {\n            \"produtos\": [\n                {\n                    \"idProduto\": \"BeeJh5lz3k6kSIzA\",\n                    \"quantidade\": 2,\n                    \"precoUnitario\": 470\n                },\n                {\n                    \"idProduto\": \"K6leHdftCeOJj8BJ\",\n                    \"quantidade\": 1,\n                    \"precoUnitario\": 5240\n                }\n            ],\n            \"precoTotal\": 6180,\n            \"quantidadeTotal\": 3,\n            \"idUsuario\": \"0uxuPY0cbmQhpEz1\",\n            \"_id\": \"qbMqntef4iTOwWfg\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/carrinhos/cancelar-compra"
+							},
+							"response": [
+								{
+									"name": "3.6 /carrinhos/cancelar-compra",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"quantidade\": 3,\n    \"carrinhos\": [\n        {\n            \"produtos\": [\n                {\n                    \"idProduto\": \"xzMbEq4MI1ovUQ0N\",\n                    \"quantidade\": 1,\n                    \"precoUnitario\": 22\n                }\n            ],\n            \"precoTotal\": 22,\n            \"quantidadeTotal\": 1,\n            \"idUsuario\": \"acUKKYrXhKrEZMPL\",\n            \"_id\": \"2jF7NiHGkPR7wTe1\"\n        },\n        {\n            \"produtos\": [\n                {\n                    \"idProduto\": \"QYfJEsBNwQV94iFu\",\n                    \"quantidade\": 2,\n                    \"precoUnitario\": 39\n                },\n                {\n                    \"idProduto\": \"Coxk8ujZwqgPcKzG\",\n                    \"quantidade\": 1,\n                    \"precoUnitario\": 27\n                }\n            ],\n            \"precoTotal\": 105,\n            \"quantidadeTotal\": 3,\n            \"idUsuario\": \"1oUxhsNqvJqSVSd7\",\n            \"_id\": \"SkxyVS3H3xPhyGdH\"\n        },\n        {\n            \"produtos\": [\n                {\n                    \"idProduto\": \"BeeJh5lz3k6kSIzA\",\n                    \"quantidade\": 2,\n                    \"precoUnitario\": 470\n                },\n                {\n                    \"idProduto\": \"K6leHdftCeOJj8BJ\",\n                    \"quantidade\": 1,\n                    \"precoUnitario\": 5240\n                }\n            ],\n            \"precoTotal\": 6180,\n            \"quantidadeTotal\": 3,\n            \"idUsuario\": \"0uxuPY0cbmQhpEz1\",\n            \"_id\": \"qbMqntef4iTOwWfg\"\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/carrinhos/cancelar-compra"
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "access-control-allow-origin",
+											"value": "*"
+										},
+										{
+											"key": "x-dns-prefetch-control",
+											"value": "off"
+										},
+										{
+											"key": "x-frame-options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "strict-transport-security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "x-download-options",
+											"value": "noopen"
+										},
+										{
+											"key": "x-content-type-options",
+											"value": "nosniff"
+										},
+										{
+											"key": "x-xss-protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "x-cloud-trace-context",
+											"value": "8b5c691df6e23082ad3a6cfd57142ac3"
+										},
+										{
+											"key": "date",
+											"value": "Fri, 09 May 2025 16:41:54 GMT"
+										},
+										{
+											"key": "server",
+											"value": "Google Frontend"
+										},
+										{
+											"key": "Content-Length",
+											"value": "67"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"id deve ter exatamente 16 caracteres alfanuméricos\"\n}"
+								}
+							]
+						},
+						{
+							"name": "/carrinhos/cancelar-compra Copy",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"quantidade\": 1,\n    \"carrinhos\": [\n        {\n            \"produtos\": [\n                //deletando produto\n                /*\n                {\n                    \"idProduto\": \"BeeJh5lz3k6kSIzA\",\n                    //estamos somando 4 unidades em relação ao carrinho inicial\n                    \"quantidade\": 6,\n                    \"precoUnitario\": 470\n                }*/,\n                {\n                    \"idProduto\": \"K6leHdftCeOJj8BJ\",\n                    \"quantidade\": 1,\n                    \"precoUnitario\": 5240\n                }\n            ],\n            \"precoTotal\": 6180,\n            \"quantidadeTotal\": 3,\n            \"idUsuario\": \"0uxuPY0cbmQhpEz1\",\n            \"_id\": \"qbMqntef4iTOwWfg\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/carrinhos/cancelar-compra"
+							},
+							"response": [
+								{
+									"name": "2.6 /carrinhos/cancelar-ccompra deletando item do carrinho",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"quantidade\": 1,\n    \"carrinhos\": [\n        {\n            \"produtos\": [\n                //deletando produto\n                /*\n                {\n                    \"idProduto\": \"BeeJh5lz3k6kSIzA\",\n                    //estamos somando 4 unidades em relação ao carrinho inicial\n                    \"quantidade\": 6,\n                    \"precoUnitario\": 470\n                }*/,\n                {\n                    \"idProduto\": \"K6leHdftCeOJj8BJ\",\n                    \"quantidade\": 1,\n                    \"precoUnitario\": 5240\n                }\n            ],\n            \"precoTotal\": 6180,\n            \"quantidadeTotal\": 3,\n            \"idUsuario\": \"0uxuPY0cbmQhpEz1\",\n            \"_id\": \"qbMqntef4iTOwWfg\"\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/carrinhos/cancelar-compra"
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "access-control-allow-origin",
+											"value": "*"
+										},
+										{
+											"key": "x-dns-prefetch-control",
+											"value": "off"
+										},
+										{
+											"key": "x-frame-options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "strict-transport-security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "x-download-options",
+											"value": "noopen"
+										},
+										{
+											"key": "x-content-type-options",
+											"value": "nosniff"
+										},
+										{
+											"key": "x-xss-protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "x-cloud-trace-context",
+											"value": "911431d2dfa264153d627c01bcbf6065"
+										},
+										{
+											"key": "date",
+											"value": "Thu, 08 May 2025 15:58:05 GMT"
+										},
+										{
+											"key": "server",
+											"value": "Google Frontend"
+										},
+										{
+											"key": "Content-Length",
+											"value": "67"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"id deve ter exatamente 16 caracteres alfanuméricos\"\n}"
+								}
+							]
+						},
+						{
+							"name": "/carrinhos/cancelar-compra",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"quantidade\": 1,\n    \"carrinhos\": [\n        {\n            \"produtos\": [\n                {\n                    \"idProduto\": \"BeeJh5lz3k6kSIzA\",\n                    //estamos somando 7 unidades em relação ao carrinho inicial\n                    \"quantidade\": 13,\n                    \"precoUnitario\": 470\n                },\n                {\n                    \"idProduto\": \"K6leHdftCeOJj8BJ\",\n                    \"quantidade\": 1,\n                    \"precoUnitario\": 5240\n                }\n            ],\n            \"precoTotal\": 6180,\n            \"quantidadeTotal\": 3,\n            \"idUsuario\": \"0uxuPY0cbmQhpEz1\",\n            \"_id\": \"qbMqntef4iTOwWfg\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/carrinhos/cancelar-compra"
+							},
+							"response": [
+								{
+									"name": "3.7 /carrinhos/atualizar carrinho após cancelamento possível \"FALSO POSITIVO\"",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"quantidade\": 1,\n    \"carrinhos\": [\n        {\n            \"produtos\": [\n                {\n                    \"idProduto\": \"BeeJh5lz3k6kSIzA\",\n                    //estamos somando 7 unidades em relação ao carrinho inicial\n                    \"quantidade\": 13,\n                    \"precoUnitario\": 470\n                },\n                {\n                    \"idProduto\": \"K6leHdftCeOJj8BJ\",\n                    \"quantidade\": 1,\n                    \"precoUnitario\": 5240\n                }\n            ],\n            \"precoTotal\": 6180,\n            \"quantidadeTotal\": 3,\n            \"idUsuario\": \"0uxuPY0cbmQhpEz1\",\n            \"_id\": \"qbMqntef4iTOwWfg\"\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/carrinhos/cancelar-compra"
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "access-control-allow-origin",
+											"value": "*"
+										},
+										{
+											"key": "x-dns-prefetch-control",
+											"value": "off"
+										},
+										{
+											"key": "x-frame-options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "strict-transport-security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "x-download-options",
+											"value": "noopen"
+										},
+										{
+											"key": "x-content-type-options",
+											"value": "nosniff"
+										},
+										{
+											"key": "x-xss-protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "x-cloud-trace-context",
+											"value": "7737bbf81f6924ff79b905d0d55c1428"
+										},
+										{
+											"key": "date",
+											"value": "Thu, 08 May 2025 16:03:35 GMT"
+										},
+										{
+											"key": "server",
+											"value": "Google Frontend"
+										},
+										{
+											"key": "Content-Length",
+											"value": "67"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"id deve ter exatamente 16 caracteres alfanuméricos\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "/carrinhos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"quantidade\": 1,\n    \"carrinhos\": [\n        {\n            \"produtos\": [\n                {\n                    \"idProduto\": \"BeeJh5lz3k6kSIzA\",\n                    \"quantidade\": 2,\n                    \"precoUnitario\": 470\n                },\n                {\n                    \"idProduto\": \"K6leHdftCeOJj8BJ\",\n                    \"quantidade\": 1,\n                    \"precoUnitario\": 5240\n                }\n            ],\n            \"precoTotal\": 6180,\n            \"quantidadeTotal\": 3,\n            \"idUsuario\": \"0uxuPY0cbmQhpEz1\",\n            \"_id\": \"qbMqntef4iTOwWfg\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/carrinhos"
+					},
+					"response": [
+						{
+							"name": "3.5 /carrinhos listando carrinho com user autenticado",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"quantidade\": 1,\n    \"carrinhos\": [\n        {\n            \"produtos\": [\n                {\n                    \"idProduto\": \"BeeJh5lz3k6kSIzA\",\n                    \"quantidade\": 2,\n                    \"precoUnitario\": 470\n                },\n                {\n                    \"idProduto\": \"K6leHdftCeOJj8BJ\",\n                    \"quantidade\": 1,\n                    \"precoUnitario\": 5240\n                }\n            ],\n            \"precoTotal\": 6180,\n            \"quantidadeTotal\": 3,\n            \"idUsuario\": \"0uxuPY0cbmQhpEz1\",\n            \"_id\": \"qbMqntef4iTOwWfg\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/carrinhos"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Content-Length",
+									"value": "273"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 08 May 2025 15:38:10 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "\n<html>\n    <head>\n        <meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n        <title>400 Bad Request</title>\n    </head>\n    <body text=#000000 bgcolor=#ffffff>\n        <h1>Error: Bad Request</h1>\n        <h2>Your client has issued a malformed or illegal request.</h2>\n        <h2></h2>\n    </body>\n</html>"
+						}
+					]
+				},
+				{
+					"name": "/carrinhos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": {
+								"key": "Authorization",
+								"value": "1234"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"quantidade\": 1,\n    \"carrinhos\": [\n        {\n            \"produtos\": [\n                {\n                    \"idProduto\": \"BeeJh5lz3k6kSIzA\",\n                    \"quantidade\": 2,\n                    \"precoUnitario\": 470\n                },\n                {\n                    \"idProduto\": \"K6leHdftCeOJj8BJ\",\n                    \"quantidade\": 1,\n                    \"precoUnitario\": 5240\n                }\n            ],\n            \"precoTotal\": 6180,\n            \"quantidadeTotal\": 3,\n            \"idUsuario\": \"0uxuPY0cbmQhpEz1\",\n            \"_id\": \"qbMqntef4iTOwWfg\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/carrinhos"
+					},
+					"response": [
+						{
+							"name": "3.8/carrinhos consultando carrinho de outro useuario",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"quantidade\": 1,\n    \"carrinhos\": [\n        {\n            \"produtos\": [\n                {\n                    \"idProduto\": \"BeeJh5lz3k6kSIzA\",\n                    \"quantidade\": 2,\n                    \"precoUnitario\": 470\n                },\n                {\n                    \"idProduto\": \"K6leHdftCeOJj8BJ\",\n                    \"quantidade\": 1,\n                    \"precoUnitario\": 5240\n                }\n            ],\n            \"precoTotal\": 6180,\n            \"quantidadeTotal\": 3,\n            \"idUsuario\": \"0uxuPY0cbmQhpEz1\",\n            \"_id\": \"qbMqntef4iTOwWfg\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/carrinhos"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Content-Length",
+									"value": "273"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 08 May 2025 15:50:56 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "\n<html>\n    <head>\n        <meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n        <title>400 Bad Request</title>\n    </head>\n    <body text=#000000 bgcolor=#ffffff>\n        <h1>Error: Bad Request</h1>\n        <h2>Your client has issued a malformed or illegal request.</h2>\n        <h2></h2>\n    </body>\n</html>"
+						}
+					]
+				},
+				{
+					"name": "/carrinhos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"produtos\": [\n    {\n      \"idProduto\": \"BeeJh5lz3k6kSIzA\",\n      \"quantidade\": 10\n    },\n    {\n      \"idProduto\": \"YaeJ455lz3k6kSIzA\",\n      \"quantidade\": 250\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/carrinhos"
+					},
+					"response": [
+						{
+							"name": "3.1 /carrinhos o carrinho criado está desalinhado com o pedido",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"produtos\": [\n    {\n      \"idProduto\": \"BeeJh5lz3k6kSIzA\",\n      \"quantidade\": 10\n    },\n    {\n      \"idProduto\": \"YaeJ455lz3k6kSIzA\",\n      \"quantidade\": 250\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/carrinhos"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "x-dns-prefetch-control",
+									"value": "off"
+								},
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "x-download-options",
+									"value": "noopen"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "x-cloud-trace-context",
+									"value": "56b27ecc5ee7c4c944b2c10699b8aca9"
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 May 2025 04:39:24 GMT"
+								},
+								{
+									"key": "server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "595"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"quantidade\": 1,\n    \"carrinhos\": [\n        {\n            \"produtos\": [\n                {\n                    \"idProduto\": \"BeeJh5lz3k6kSIzA\",\n                    \"quantidade\": 2,\n                    \"precoUnitario\": 470\n                },\n                {\n                    \"idProduto\": \"K6leHdftCeOJj8BJ\",\n                    \"quantidade\": 1,\n                    \"precoUnitario\": 5240\n                }\n            ],\n            \"precoTotal\": 6180,\n            \"quantidadeTotal\": 3,\n            \"idUsuario\": \"0uxuPY0cbmQhpEz1\",\n            \"_id\": \"qbMqntef4iTOwWfg\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "/carrinhos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"produtos\": [\n    {\n      \"idProduto\": \"BeeJh5lz3k6kSIzA\",\n      \"quantidade\": 0\n    },\n    {\n      \"idProduto\": \"YaeJ455lz3k6kSIzA\",\n      \"quantidade\": -30\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/carrinhos"
+					},
+					"response": [
+						{
+							"name": "3.3 /carrinhos com quantidade zerada ou negativa",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"produtos\": [\n    {\n      \"idProduto\": \"BeeJh5lz3k6kSIzA\",\n      \"quantidade\": 0\n    },\n    {\n      \"idProduto\": \"YaeJ455lz3k6kSIzA\",\n      \"quantidade\": -30\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/carrinhos"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "x-dns-prefetch-control",
+									"value": "off"
+								},
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "x-download-options",
+									"value": "noopen"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "x-cloud-trace-context",
+									"value": "015837cbca85c4393bbb91a4cae51401"
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 May 2025 15:15:52 GMT"
+								},
+								{
+									"key": "server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "44"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"quantidade\": 0,\n    \"carrinhos\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "/carrinhos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"produtos\": [\n    {\n        \"idProduto\": \"BeeJh5lz3k6kSIzA\",\n        \"quantidade\": 10\n    },\n    {\n        \"idProduto\": \"YaeJ455lz3k6kSIzA\",\n        \"quantidade\": 250\n    }\n    {\n        \"idProduto\": \"inexistente\",\n        \"quantidade\": 17\n    }\n        \n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/carrinhos"
+					},
+					"response": [
+						{
+							"name": "3.2 /carrinhos com produtos inexistentes",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"produtos\": [\n    {\n        \"idProduto\": \"BeeJh5lz3k6kSIzA\",\n        \"quantidade\": 10\n    },\n    {\n        \"idProduto\": \"YaeJ455lz3k6kSIzA\",\n        \"quantidade\": 250\n    }\n    {\n        \"idProduto\": \"inexistente\",\n        \"quantidade\": 17\n    }\n        \n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/carrinhos"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "x-dns-prefetch-control",
+									"value": "off"
+								},
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "x-download-options",
+									"value": "noopen"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "x-cloud-trace-context",
+									"value": "9e1f8493ffb26d40e4fee54071e18d9e"
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 May 2025 15:13:08 GMT"
+								},
+								{
+									"key": "server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "44"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"quantidade\": 0,\n    \"carrinhos\": []\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": {
+			"value": "0000",
+			"key": "Authorization"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "1"
+		},
+		{
+			"key": "base_url",
+			"value": "compassuol.serverest.dev"
+		}
+	]
+}

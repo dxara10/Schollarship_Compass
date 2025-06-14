@@ -1,0 +1,129 @@
+preparando ambiente robot
+
+crie maquina virtual
+ative ela
+
+instale o node.js
+onstale o python se não estiver instalado
+
+instale o robotframework
+instale o robotframework-browser
+instale o robotframework-requests
+instale o robotframework-faker
+
+
+ra-22321702-5@alunos.unicesumar.edu.br
+
+
+
+🔹 1. API Usuários (US 001)
+📌 Teste Composto: Fluxo CRUD de Usuários
+plaintext
+1. "Criar usuário válido"  
+   - Keyword: `Criar usuário com nome "Ana Silva", email "ana@exemplo.com", senha "senhaSegura123", administrador "false"`  
+   - Keyword: `Verificar status code 201`  
+   - Keyword: `Verificar mensagem "Cadastro realizado com sucesso"`  
+
+2. "Atualizar usuário criado"  
+   - Keyword: `Atualizar usuário ID [ID_ANA] com nome "Ana Souza", email "ana.souza@exemplo.com"`  
+   - Keyword: `Verificar status code 200`  
+
+3. "Listar usuários e validar atualização"  
+   - Keyword: `Listar todos os usuários`  
+   - Keyword: `Verificar se usuário ID [ID_ANA] tem nome "Ana Souza"`  
+
+4. "Deletar usuário"  
+   - Keyword: `Deletar usuário ID [ID_ANA]`  
+   - Keyword: `Verificar status code 200`  
+📌 Teste Composto: Validações de Erro
+plaintext
+1. "Tentar criar usuário com e-mail Gmail"  
+   - Keyword: `Criar usuário com nome "João", email "joao@gmail.com", senha "123", administrador "false"`  
+   - Keyword: `Verificar status code 400`  
+   - Keyword: `Verificar mensagem "Cadastro com e-mail de provedor não permitido"`  
+
+2. "Tentar criar usuário com senha curta"  
+   - Keyword: `Criar usuário com nome "Maria", email "maria@exemplo.com", senha "123", administrador "false"`  
+   - Keyword: `Verificar status code 400`  
+   - Keyword: `Verificar mensagem "Senha deve ter entre 5 e 10 caracteres"`  
+
+
+🔹 2. API Login (US 002)
+📌 Teste Composto: Fluxo de Login Válido
+plaintext
+1. "Realizar login com credenciais corretas"  
+   - Keyword: `Realizar login com email "ana@exemplo.com" e senha "senhaSegura123"`  
+   - Keyword: `Verificar status code 200`  
+   - Keyword: `Armazenar token JWT`  
+
+2. "Validar tempo de expiração do token (10 minutos)"  
+   - Keyword: `Extrair expiração do token`  
+   - Keyword: `Verificar se expira em 600 segundos`  
+📌 Teste Composto: Validações de Login Inválido
+plaintext
+1. "Tentar login com usuário não cadastrado"  
+   - Keyword: `Realizar login com email "inexistente@exemplo.com" e senha "senha123"`  
+   - Keyword: `Verificar status code 401`  
+
+2. "Tentar login com senha incorreta"  
+   - Keyword: `Realizar login com email "ana@exemplo.com" e senha "senhaErrada"`  
+   - Keyword: `Verificar status code 401`  
+
+
+🔹 3. API Produtos (US 003)
+📌 Teste Composto: Fluxo CRUD de Produtos (Autenticado)
+plaintext
+1. "Criar produto autenticado"  
+   - Keyword: `Adicionar token Bearer [TOKEN]`  
+   - Keyword: `Criar produto com nome "Notebook", preço "3500", descrição "Dell i7"`  
+   - Keyword: `Verificar status code 201`  
+
+2. "Atualizar produto"  
+   - Keyword: `Atualizar produto ID [ID_NOTEBOOK] com preço "4000"`  
+   - Keyword: `Verificar status code 200`  
+
+3. "Deletar produto"  
+   - Keyword: `Deletar produto ID [ID_NOTEBOOK]`  
+   - Keyword: `Verificar status code 200`  
+📌 Teste Composto: Validações de Autenticação
+plaintext
+1. "Tentar criar produto sem token"  
+   - Keyword: `Remover token Bearer`  
+   - Keyword: `Criar produto com nome "Mouse", preço "150", descrição "Sem fio"`  
+   - Keyword: `Verificar status code 401`  
+
+
+🔹 4. API Carrinhos (US 004)
+📌 Teste Composto: Fluxo de Compra
+plaintext
+1. "Criar carrinho autenticado"  
+   - Keyword: `Adicionar token Bearer [TOKEN]`  
+   - Keyword: `Criar carrinho para usuário ID [ID_ANA]`  
+   - Keyword: `Verificar status code 201`  
+
+2. "Adicionar produto ao carrinho"  
+   - Keyword: `Adicionar produto ID [ID_PRODUTO] ao carrinho ID [ID_CARRINHO]`  
+   - Keyword: `Verificar status code 201`  
+
+3. "Finalizar compra"  
+   - Keyword: `Finalizar compra do carrinho ID [ID_CARRINHO]`  
+   - Keyword: `Verificar status code 200`  
+📌 Teste Composto: Validações de Carrinho
+plaintext
+1. "Tentar finalizar carrinho vazio"  
+   - Keyword: `Criar carrinho vazio para usuário ID [ID_ANA]`  
+   - Keyword: `Finalizar compra do carrinho ID [ID_CARRINHO_VAZIO]`  
+   - Keyword: `Verificar status code 400`  
+🎯 Estrutura das Keywords (Exemplo Robot Framework)
+robot
+*** Keywords ***
+Criar usuário com nome "${nome}", email "${email}", senha "${senha}", administrador "${admin}"  
+    ${body}=    Create Dictionary    nome=${nome}    email=${email}    password=${senha}    administrador=${admin}  
+    ${response}=    POST    ${BASE_URL}/usuarios    json=${body}  
+    Set Test Variable    ${RESPONSE}    ${response}  
+
+Verificar status code ${status}  
+    Should Be Equal As Numbers    ${RESPONSE.status_code}    ${status}  
+
+
+

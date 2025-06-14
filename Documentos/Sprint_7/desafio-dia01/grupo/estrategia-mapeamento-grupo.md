@@ -1,0 +1,1 @@
+Aqui vamos explorar a extrategia
