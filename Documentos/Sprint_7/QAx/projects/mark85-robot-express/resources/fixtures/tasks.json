@@ -1,0 +1,24 @@
+{
+    "create":{
+        "user":{
+            "name":"Steve",
+            "email":"steve@apple.com",
+            "password":"1234567"
+        },
+        "task":{
+            "name":"Criar uma nova versão do Iphone",
+            "tags":["ios", "music","ipod"]
+        }
+    },
+    "duplicate":{
+        "user":{
+            "name":"Amanda Waller",
+            "email":"waller@checkmate.com",
+            "password":"1234567"
+        },
+        "task":{
+            "name":"CRecrutar metahumanos",
+            "tags":[]
+        }
+    }
+}

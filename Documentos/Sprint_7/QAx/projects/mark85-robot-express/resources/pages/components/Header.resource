@@ -16,3 +16,6 @@ User should be logged in
     
     Get Text    ${element}    equal    Olá, ${splited_name}[0]
 
+
+Go to task form
+    Click    css=.button-add
