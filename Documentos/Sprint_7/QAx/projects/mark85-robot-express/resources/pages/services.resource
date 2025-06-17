@@ -7,13 +7,16 @@ Library           RequestsLibrary
 *** Keywords ***
 POST user session
     [Arguments]    ${user}
-
-    ${payload}        Create Dictionary
+    ${payload}    Create Dictionary
     ...    email=${user}[email]
     ...    password=${user}[password]
 
-    ${resp}    POST    url=http://localhost:3333/session  
+#    ${headers}    Create Dictionary
+#    ...    Authorization=${token}
+
+    ${resp}    POST    url=http://localhost:3333/sessions      
     ...    json=${payload}
+#    ...    headers=${headers}
     ...    expected_status=200
     
     ${token}    Set Variable    ${resp.json()}[token]

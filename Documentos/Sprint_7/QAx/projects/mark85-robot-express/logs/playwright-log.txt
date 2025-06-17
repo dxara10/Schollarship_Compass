@@ -1,107 +1,59 @@
-{"level":30,"time":"2025-06-16T07:18:32.855Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Listening on 127.0.0.1:47133"}
-(node:100980) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+{"level":30,"time":"2025-06-17T04:52:22.890Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"Listening on 127.0.0.1:40189"}
+(node:180699) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-{"level":30,"time":"2025-06-16T07:18:32.944Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Start of node method newBrowser"}
-{"level":30,"time":"2025-06-16T07:18:34.246Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Adding browser to stack: firefox, version: 139.0"}
-{"level":30,"time":"2025-06-16T07:18:34.247Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"End of node method newBrowser"}
-{"level":30,"time":"2025-06-16T07:18:34.247Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Adding 0 contexts to browser"}
-{"level":30,"time":"2025-06-16T07:18:34.254Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Start of node method newPage"}
-{"level":30,"time":"2025-06-16T07:18:34.254Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"currentBrowser: [object Object]"}
-{"level":30,"time":"2025-06-16T07:18:34.317Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Changed active context"}
-{"level":30,"time":"2025-06-16T07:18:35.720Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Video path: undefined"}
-{"level":30,"time":"2025-06-16T07:18:35.720Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Changed active page"}
-{"level":30,"time":"2025-06-16T07:18:37.009Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"End of node method newPage"}
-{"level":30,"time":"2025-06-16T07:18:37.438Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Start of node method fillText"}
-{"level":30,"time":"2025-06-16T07:18:37.439Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Strict mode is enabled, find Locator with css=input[placeholder$=mail] in page."}
-{"level":30,"time":"2025-06-16T07:18:37.542Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"End of node method fillText"}
-{"level":30,"time":"2025-06-16T07:18:37.547Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Start of node method fillText"}
-{"level":30,"time":"2025-06-16T07:18:37.547Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Strict mode is enabled, find Locator with css=input[placeholder$=Senha] in page."}
-{"level":30,"time":"2025-06-16T07:18:37.583Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"End of node method fillText"}
-{"level":30,"time":"2025-06-16T07:18:37.589Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Start of node method click"}
-{"level":30,"time":"2025-06-16T07:18:37.589Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Strict mode is enabled, find Locator with css=button >> text=Entrar in page."}
-{"level":30,"time":"2025-06-16T07:18:37.689Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"End of node method click"}
-{"level":30,"time":"2025-06-16T07:18:37.701Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Start of node method waitForElementState"}
-{"level":30,"time":"2025-06-16T07:18:37.701Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Strict mode is enabled, find Locator with css=header .right small in page."}
-{"level":30,"time":"2025-06-16T07:18:37.763Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"End of node method waitForElementState"}
-{"level":30,"time":"2025-06-16T07:18:37.770Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Start of node method getText"}
-{"level":30,"time":"2025-06-16T07:18:37.770Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Strict mode is enabled, find Locator with css=header .right small in page."}
-{"level":30,"time":"2025-06-16T07:18:37.831Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Retrieved text for element css=header .right small containing Olá, Steve"}
-{"level":30,"time":"2025-06-16T07:18:37.832Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"End of node method getText"}
-{"level":30,"time":"2025-06-16T07:18:37.837Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Start of node method click"}
-{"level":30,"time":"2025-06-16T07:18:37.837Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Strict mode is enabled, find Locator with css=.button-add in page."}
-{"level":30,"time":"2025-06-16T07:18:37.893Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"End of node method click"}
-{"level":30,"time":"2025-06-16T07:18:37.900Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Start of node method fillText"}
-{"level":30,"time":"2025-06-16T07:18:37.900Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Strict mode is enabled, find Locator with css=input[placeholder$=tarefa] in page."}
-{"level":30,"time":"2025-06-16T07:18:37.922Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"End of node method fillText"}
-{"level":30,"time":"2025-06-16T07:18:37.931Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Start of node method fillText"}
-{"level":30,"time":"2025-06-16T07:18:37.931Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Strict mode is enabled, find Locator with css=input[name=tags] in page."}
-{"level":30,"time":"2025-06-16T07:18:37.951Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"End of node method fillText"}
-{"level":30,"time":"2025-06-16T07:18:38.962Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Start of node method press"}
-{"level":30,"time":"2025-06-16T07:18:38.963Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Strict mode is enabled, find Locator with css=input[name=tags] in page."}
-{"level":30,"time":"2025-06-16T07:18:39.086Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"End of node method press"}
-{"level":30,"time":"2025-06-16T07:18:39.096Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Start of node method fillText"}
-{"level":30,"time":"2025-06-16T07:18:39.096Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Strict mode is enabled, find Locator with css=input[name=tags] in page."}
-{"level":30,"time":"2025-06-16T07:18:39.165Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"End of node method fillText"}
-{"level":30,"time":"2025-06-16T07:18:40.176Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Start of node method press"}
-{"level":30,"time":"2025-06-16T07:18:40.176Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Strict mode is enabled, find Locator with css=input[name=tags] in page."}
-{"level":30,"time":"2025-06-16T07:18:40.243Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"End of node method press"}
-{"level":30,"time":"2025-06-16T07:18:40.253Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Start of node method fillText"}
-{"level":30,"time":"2025-06-16T07:18:40.253Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Strict mode is enabled, find Locator with css=input[name=tags] in page."}
-{"level":30,"time":"2025-06-16T07:18:40.290Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"End of node method fillText"}
-{"level":30,"time":"2025-06-16T07:18:41.302Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Start of node method press"}
-{"level":30,"time":"2025-06-16T07:18:41.302Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Strict mode is enabled, find Locator with css=input[name=tags] in page."}
-{"level":30,"time":"2025-06-16T07:18:41.947Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"End of node method press"}
-{"level":30,"time":"2025-06-16T07:18:41.959Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Start of node method click"}
-{"level":30,"time":"2025-06-16T07:18:41.959Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Strict mode is enabled, find Locator with css=button >> text=Cadastrar in page."}
-{"level":30,"time":"2025-06-16T07:18:42.552Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"End of node method click"}
-{"level":30,"time":"2025-06-16T07:18:42.563Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Start of node method waitForElementState"}
-{"level":30,"time":"2025-06-16T07:18:42.563Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Strict mode is enabled, find Locator with css=.task-todo >> text=Criar uma nova versão do Iphone in page."}
-{"level":30,"time":"2025-06-16T07:18:42.689Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"End of node method waitForElementState"}
-{"level":30,"time":"2025-06-16T07:18:42.698Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Start of node method takeScreenshot"}
-{"level":30,"time":"2025-06-16T07:18:42.698Z","pid":100980,"hostname":"cortes-Inspiron-7520","Take screenshot with options: ":{"path":"/home/cortes/Documents/Compass_Estágio/GIT/Schollarship_Compass/Documentos/Sprint_7/QAx/projects/mark85-robot-express/logs/browser/screenshot/robotframework-browser-screenshot-1.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
-{"level":30,"time":"2025-06-16T07:18:42.880Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"End of node method takeScreenshot"}
-{"level":30,"time":"2025-06-16T07:18:42.895Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-06-16T07:18:42.904Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-06-16T07:18:42.911Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-06-16T07:18:42.917Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-06-16T07:18:42.923Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-06-16T07:18:42.928Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-06-16T07:18:42.938Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-06-16T07:18:42.943Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-06-16T07:18:42.950Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Changed active context"}
-{"level":30,"time":"2025-06-16T07:18:42.951Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Changing current active page: page=225f37e0-abc8-440e-ae5a-9f8ebe96deb5"}
-{"level":30,"time":"2025-06-16T07:18:42.951Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Changed active page"}
-{"level":30,"time":"2025-06-16T07:18:42.957Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Start of node method closeContext"}
-{"level":30,"time":"2025-06-16T07:18:42.983Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Removed page=67c00ea4-c733-46f7-bcf2-5bf285f0bd82 from context=c81c34fa-8ad1-422e-848f-a266e9d12535 page stack"}
-{"level":30,"time":"2025-06-16T07:18:42.990Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"End of node method closeContext"}
-{"level":30,"time":"2025-06-16T07:18:42.999Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-06-16T07:18:42.999Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-06-16T07:18:43.011Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Start of node method switchBrowser"}
-{"level":30,"time":"2025-06-16T07:18:43.011Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"End of node method switchBrowser"}
-{"level":30,"time":"2025-06-16T07:18:43.023Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Start of node method newPage"}
-{"level":30,"time":"2025-06-16T07:18:43.023Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"currentBrowser: [object Object]"}
-{"level":30,"time":"2025-06-16T07:18:43.055Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Changed active context"}
-{"level":30,"time":"2025-06-16T07:18:43.474Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Video path: undefined"}
-{"level":30,"time":"2025-06-16T07:18:43.475Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Changed active page"}
-{"level":30,"time":"2025-06-16T07:18:43.891Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"End of node method newPage"}
-{"level":30,"time":"2025-06-16T07:18:44.013Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Start of node method takeScreenshot"}
-{"level":30,"time":"2025-06-16T07:18:44.013Z","pid":100980,"hostname":"cortes-Inspiron-7520","Take screenshot with options: ":{"path":"/home/cortes/Documents/Compass_Estágio/GIT/Schollarship_Compass/Documentos/Sprint_7/QAx/projects/mark85-robot-express/logs/browser/screenshot/robotframework-browser-screenshot-2.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
-{"level":30,"time":"2025-06-16T07:18:44.261Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"End of node method takeScreenshot"}
-{"level":30,"time":"2025-06-16T07:18:44.268Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-06-16T07:18:44.291Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-06-16T07:18:44.296Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-06-16T07:18:44.305Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-06-16T07:18:44.308Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-06-16T07:18:44.311Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-06-16T07:18:44.315Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-06-16T07:18:44.318Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-06-16T07:18:44.321Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Changed active context"}
-{"level":30,"time":"2025-06-16T07:18:44.321Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Changing current active page: page=60ce9c1f-2e2e-4855-80b7-4e9fc28f3a29"}
-{"level":30,"time":"2025-06-16T07:18:44.321Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Changed active page"}
-{"level":30,"time":"2025-06-16T07:18:44.324Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Start of node method closeContext"}
-{"level":30,"time":"2025-06-16T07:18:44.341Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Removed page=d85e4a6d-bd03-4149-8957-1b94bf631a52 from context=38068021-cda8-43f8-a7b9-df3b2489f3b7 page stack"}
-{"level":30,"time":"2025-06-16T07:18:44.344Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"End of node method closeContext"}
-{"level":30,"time":"2025-06-16T07:18:44.351Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-06-16T07:18:44.352Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-06-16T07:18:44.435Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"Start of node method closeAllBrowsers"}
-{"level":30,"time":"2025-06-16T07:18:45.243Z","pid":100980,"hostname":"cortes-Inspiron-7520","msg":"End of node method closeAllBrowsers"}
+{"level":30,"time":"2025-06-17T04:52:22.991Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-06-17T04:52:24.178Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"Adding browser to stack: firefox, version: 139.0"}
+{"level":30,"time":"2025-06-17T04:52:24.179Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-06-17T04:52:24.178Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-06-17T04:52:24.189Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-06-17T04:52:24.190Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-06-17T04:52:24.280Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"Changed active context"}
+{"level":30,"time":"2025-06-17T04:52:25.902Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"Video path: undefined"}
+{"level":30,"time":"2025-06-17T04:52:25.903Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"Changed active page"}
+{"level":30,"time":"2025-06-17T04:52:26.989Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"End of node method newPage"}
+{"level":30,"time":"2025-06-17T04:52:27.342Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-06-17T04:52:27.343Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"Strict mode is enabled, find Locator with css=input[placeholder$=mail] in page."}
+{"level":30,"time":"2025-06-17T04:52:27.510Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"End of node method fillText"}
+{"level":30,"time":"2025-06-17T04:52:27.522Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-06-17T04:52:27.522Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"Strict mode is enabled, find Locator with css=input[placeholder$=Senha] in page."}
+{"level":30,"time":"2025-06-17T04:52:27.564Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"End of node method fillText"}
+{"level":30,"time":"2025-06-17T04:52:27.573Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"Start of node method click"}
+{"level":30,"time":"2025-06-17T04:52:27.574Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"Strict mode is enabled, find Locator with css=button >> text=Entrar in page."}
+{"level":30,"time":"2025-06-17T04:52:27.726Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"End of node method click"}
+{"level":30,"time":"2025-06-17T04:52:27.735Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-06-17T04:52:27.736Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"Strict mode is enabled, find Locator with css=header .right small in page."}
+{"level":30,"time":"2025-06-17T04:52:27.793Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-06-17T04:52:27.801Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"Start of node method getText"}
+{"level":30,"time":"2025-06-17T04:52:27.802Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"Strict mode is enabled, find Locator with css=header .right small in page."}
+{"level":30,"time":"2025-06-17T04:52:27.867Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"Retrieved text for element css=header .right small containing Olá, Peter"}
+{"level":30,"time":"2025-06-17T04:52:27.867Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"End of node method getText"}
+{"level":30,"time":"2025-06-17T04:52:27.874Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-06-17T04:52:27.874Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"Strict mode is enabled, find Locator with xpath=//*[@id=\"root\"]/div/main/div/div/div/div/button[2] in page."}
+{"level":30,"time":"2025-06-17T04:52:27.882Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-06-17T04:52:27.890Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"Start of node method click"}
+{"level":30,"time":"2025-06-17T04:52:27.890Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"Strict mode is enabled, find Locator with xpath=//*[@id=\"root\"]/div/main/div/div/div/div/button[2] in page."}
+{"level":30,"time":"2025-06-17T04:52:27.940Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"End of node method click"}
+{"level":30,"time":"2025-06-17T04:52:27.947Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-06-17T04:52:27.947Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"Strict mode is enabled, find Locator with css=.task-todo >> text=Proteger os sonhos in page."}
+{"level":30,"time":"2025-06-17T04:52:28.058Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-06-17T04:52:28.064Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2025-06-17T04:52:28.065Z","pid":180699,"hostname":"cortes-Inspiron-7520","Take screenshot with options: ":{"path":"/home/cortes/Documents/Compass_Estágio/GIT/Schollarship_Compass/Documentos/Sprint_7/QAx/projects/mark85-robot-express/logs/browser/screenshot/robotframework-browser-screenshot-1.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2025-06-17T04:52:28.260Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2025-06-17T04:52:28.276Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-06-17T04:52:28.283Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-06-17T04:52:28.288Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-06-17T04:52:28.293Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-06-17T04:52:28.298Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-06-17T04:52:28.302Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-06-17T04:52:28.308Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-06-17T04:52:28.313Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-06-17T04:52:28.320Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"Changed active context"}
+{"level":30,"time":"2025-06-17T04:52:28.320Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"Changing current active page: page=cd7748d6-50e2-4351-af35-23b75b15ffd6"}
+{"level":30,"time":"2025-06-17T04:52:28.321Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"Changed active page"}
+{"level":30,"time":"2025-06-17T04:52:28.326Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"Start of node method closeContext"}
+{"level":30,"time":"2025-06-17T04:52:28.349Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"Removed page=aa25f394-d199-4a02-9018-084705d49f5b from context=daf00fae-4f9d-483c-b16d-07c74737fdf7 page stack"}
+{"level":30,"time":"2025-06-17T04:52:28.355Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"End of node method closeContext"}
+{"level":30,"time":"2025-06-17T04:52:28.367Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-06-17T04:52:28.367Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-06-17T04:52:28.423Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-06-17T04:52:29.217Z","pid":180699,"hostname":"cortes-Inspiron-7520","msg":"End of node method closeAllBrowsers"}
