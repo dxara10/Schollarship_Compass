@@ -1,0 +1,14 @@
+# Virtual Environment
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Logs
+logs/
+*.log
+
+# Browser automation artifacts
+.pytest_cache/
+.coverage
+htmlcov/
