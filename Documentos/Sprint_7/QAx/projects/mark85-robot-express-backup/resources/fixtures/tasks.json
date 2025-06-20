@@ -1,0 +1,57 @@
+{
+    "create":{
+        "user":{
+            "name":"Steve",
+            "email":"steve@apple.com",
+            "password":"1234567"
+        },
+        "task":{
+            "name":"Criar uma nova versão do Iphone",
+            "tags":["ios", "music","ipod"]
+        }
+    },
+    "duplicate":{
+        "user":{
+            "name":"Amanda Waller",
+            "email":"waller@checkmate.com",
+            "password":"1234567"
+        },
+        "task":{
+            "name":"Recrutar metahumanos",
+            "tags":[]
+        }
+    },
+    "tags_limite":{
+        "user":{
+            "name":"Carlos Villagram",
+            "email":"kiko@televisa.com",
+            "password":"1234567"
+        },
+        "task":{
+            "name":"Estudar Python",
+            "tags":["Python", "pip","programacao","QAx"]
+        }
+    },
+    "done":{
+        "user":{
+            "name":"Tony Stark",
+            "email":"tony@stark.com",
+            "password":"1234567"
+        },
+        "task":{
+            "name":"Proteger a terra",
+            "tags":["arc", "Jarvis","Ultron"]
+        }
+    },
+    "delete":{
+        "user":{
+            "name":"Peter Pan",
+            "email":"peter@pan.com",
+            "password":"1234567"
+        },
+        "task":{
+            "name":"Proteger os sonhos",
+            "tags":["pirata", "Espada"]
+        }
+    }
+}
